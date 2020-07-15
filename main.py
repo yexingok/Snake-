@@ -1,5 +1,6 @@
 # coding: utf-8
 
+import os
 import pygame
 import sys
 from random import randint, seed
@@ -289,7 +290,7 @@ class Snake(object):
 
         pause = False
         onestep = False
-        while True:
+        while isdead != True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     sys.exit()
@@ -357,3 +358,4 @@ class Snake(object):
 if __name__ == '__main__':
     snake1 = Snake()
     snake1.main()
+    os.system("pause")
